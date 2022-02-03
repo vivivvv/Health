@@ -13,6 +13,7 @@ import androidx.lifecycle.get
 
 abstract class BaseFragment<out V : ViewDataBinding, out T : BaseViewModel> : Fragment() {
 
+
     private var mDataBinding: V? = null
     private var mViewModel: T? = null
 
@@ -21,6 +22,10 @@ abstract class BaseFragment<out V : ViewDataBinding, out T : BaseViewModel> : Fr
     abstract fun getBindingVariable(): Int
 
     abstract fun getContentView(): Int
+
+    fun getViewDataBinding(): V? {
+        return mDataBinding
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         mDataBinding = DataBindingUtil.inflate(inflater, getContentView(), container, false)

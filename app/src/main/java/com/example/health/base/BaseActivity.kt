@@ -1,6 +1,5 @@
 package com.example.health.base
 
-import android.app.ProgressDialog
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
