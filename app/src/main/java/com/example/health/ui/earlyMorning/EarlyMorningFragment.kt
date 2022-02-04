@@ -6,11 +6,13 @@ import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.health.BR
 import com.example.health.R
 import com.example.health.base.BaseFragment
 import com.example.health.databinding.FragmentEarlyMorningBinding
 import com.example.health.databinding.FragmentHomeBinding
+import com.example.health.ui.home.HomeFragmentDirections
 import com.example.health.ui.home.HomeViewModel
 
 
@@ -39,7 +41,8 @@ class EarlyMorningFragment: BaseFragment<FragmentEarlyMorningBinding, EarlyMorni
             if (menu.isEmpty()){
                 getViewDataBinding()?.menuEditText?.error = " Enter Menu"
             }else{
-
+                val action =EarlyMorningFragmentDirections.actionEarlyMorningFragmentToIngredientsFragment()
+                findNavController().navigate(action)
             }
         }
 

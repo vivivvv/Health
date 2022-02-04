@@ -17,5 +17,13 @@
         android:id="@+id/earlyMorningFragment"
         android:name="com.example.health.ui.earlyMorning.EarlyMorningFragment"
         android:label="fragment_early_morning"
-        tools:layout="@layout/fragment_early_morning" />
+        tools:layout="@layout/fragment_early_morning" >
+        <action
+            android:id="@+id/action_earlyMorningFragment_to_ingredientsFragment"
+            app:destination="@id/ingredientsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientsFragment"
+        android:name="com.example.health.ui.ingredients.IngredientsFragment"
+        android:label="IngredientsFragment" />
 </navigation>
